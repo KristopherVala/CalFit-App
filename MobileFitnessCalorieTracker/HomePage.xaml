@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileFitnessCalorieTracker.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Profile" Clicked="profileButton"></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+    <StackLayout BackgroundColor="Black">  
+        
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,25,0,5" >
+            <Label Text="CalFit" FontSize="20" TextColor="White"/>
+        </StackLayout>
+
+
+        <StackLayout BackgroundColor="Aquamarine">
+
+            <StackLayout BackgroundColor="Aquamarine" Padding="5" >  
+            <Label  Text="Total Calories Consumed: " BackgroundColor="Aqua" HorizontalOptions="Start" x:Name="CaloriesLabel" FontSize="20"/>
+            <Label  Text="Total Calories Burned: " BackgroundColor="Aqua" HorizontalOptions="Start" x:Name="ExerciseCaloriesLabel" FontSize="20"/>
+            <Label  Text="Day Total Of Calories: " BackgroundColor="Aqua" HorizontalOptions="Start" x:Name="TotalDayLabel" FontSize="20"/>
+
+            </StackLayout>
+
+            <Grid Margin="10" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.07*"/>
+
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Purple" TextColor="Black" Text="Add Meal" FontSize="15" Margin="0" Padding="0"></Button>
+                
+            <ListView Grid.Row="1" Grid.Column="0" BackgroundColor="Red" >
+                
+                
+            </ListView>
+
+                <Label Grid.Row="0" Grid.Column="1" BackgroundColor="HotPink" TextColor="Black" Text="Meals" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="0"></Label>
+
+                <ListView Grid.Row="1" Grid.Column="1" BackgroundColor="Teal">
+                
+                
+            </ListView>
+                
+                
+            </Grid>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
